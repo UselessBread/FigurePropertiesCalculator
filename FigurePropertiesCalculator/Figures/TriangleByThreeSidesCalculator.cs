@@ -1,17 +1,21 @@
-﻿using System;
+﻿using FigurePropertiesCalculator.Figures.Interfaces;
+using System;
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("FigurePropertiesCalculatorTests")]
 
 namespace FigurePropertiesCalculator.Figures
 {
-    internal class TriangleCalculator : IFigureAreaCalculator, IParametersValidityChecker
+    /// <summary>
+    /// Вычисление параметров тругольника по трем сторонам
+    /// </summary>
+    internal class TriangleByThreeSidesCalculator : IFigureAreaCalculator, IParametersValidityChecker, ITriangleRightAngled
     {
         private readonly double _firstSide;
         private readonly double _secondSide;
         private readonly double _thirdSide;
 
-        public TriangleCalculator(double[] sides)
+        public TriangleByThreeSidesCalculator(double[] sides)
         {
             CheckIfParametersValid(sides);
 

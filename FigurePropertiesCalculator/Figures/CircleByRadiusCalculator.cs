@@ -1,15 +1,19 @@
-﻿using System;
+﻿using FigurePropertiesCalculator.Figures.Interfaces;
+using System;
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("FigurePropertiesCalculatorTests")]
 
 namespace FigurePropertiesCalculator.Figures
 {
-    internal class CircleCalculator : IFigureAreaCalculator, IParametersValidityChecker
+    /// <summary>
+    /// Вычисление параметров круга по радиусу
+    /// </summary>
+    internal class CircleByRadiusCalculator : IFigureAreaCalculator, IParametersValidityChecker
     {
         private readonly double _radius;
 
-        public CircleCalculator(double[] sides)
+        public CircleByRadiusCalculator(double[] sides)
         {
             CheckIfParametersValid(sides);
             _radius = sides[0];

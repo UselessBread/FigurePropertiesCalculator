@@ -11,10 +11,10 @@ namespace FigurePropertiesCalculator
     /// </summary>
     public static class FigureOperations
     {
-        public static double CalculateArea(double[] sides, FigureTypes figureType) =>
+        public static double CalculateArea(double[] sides, CalculationType figureType) =>
             AreaCalculatorFactory.GetCalculator(sides, figureType).CalculateArea();
 
         public static bool IsTriangleRightAngled(double[] sides) =>
-            new TriangleCalculator(sides).IsRightAngled();
+            new TriangleByThreeSidesCalculator(sides).IsRightAngled();
     }
 }

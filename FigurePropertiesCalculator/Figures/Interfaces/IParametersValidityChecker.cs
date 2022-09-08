@@ -1,4 +1,4 @@
-﻿namespace FigurePropertiesCalculator.Figures
+﻿namespace FigurePropertiesCalculator.Figures.Interfaces
 {
     /// <summary>
     /// Интерфейс для проверки валидности параметров фигуры

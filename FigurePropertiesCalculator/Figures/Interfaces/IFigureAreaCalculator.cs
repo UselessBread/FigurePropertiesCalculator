@@ -2,7 +2,7 @@
 
 [assembly: InternalsVisibleTo("FigurePropertiesCalculatorTests")]
 
-namespace FigurePropertiesCalculator.Figures
+namespace FigurePropertiesCalculator.Figures.Interfaces
 {
     /// <summary>
     /// Интерфейс для вычисления площади фигуры

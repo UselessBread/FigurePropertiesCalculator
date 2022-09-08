@@ -1,5 +1,6 @@
 ﻿using FigurePropertiesCalculator.Enums;
 using FigurePropertiesCalculator.Figures;
+using FigurePropertiesCalculator.Figures.Interfaces;
 using System;
 using System.Runtime.CompilerServices;
 
@@ -9,15 +10,15 @@ namespace FigurePropertiesCalculator
 {
     internal static class AreaCalculatorFactory
     {
-        public static IFigureAreaCalculator GetCalculator(double[] sides, FigureTypes figureTypes)
+        public static IFigureAreaCalculator GetCalculator(double[] sides, CalculationType calculationType)
         {
-            switch (figureTypes)
+            switch (calculationType)
             {
-                case FigureTypes.Circle:
-                    return new CircleCalculator(sides);
+                case CalculationType.CircleByRadius:
+                    return new CircleByRadiusCalculator(sides);
 
-                case FigureTypes.Triangle:
-                    return new TriangleCalculator(sides);
+                case CalculationType.TriangleByThreeSides:
+                    return new TriangleByThreeSidesCalculator(sides);
 
                 default:
                     throw new ArgumentException("Фигура не поддерживается");

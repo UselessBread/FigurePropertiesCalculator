@@ -3,10 +3,10 @@
     /// <summary>
     /// Перечисление фигур, для которых реализованы калькуляторы
     /// </summary>
-    public enum FigureTypes
+    public enum CalculationType
     {
         Unknown,
-        Circle,
-        Triangle
+        CircleByRadius,
+        TriangleByThreeSides
     }
 }

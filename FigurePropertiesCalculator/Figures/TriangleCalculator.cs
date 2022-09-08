@@ -37,7 +37,7 @@ namespace FigurePropertiesCalculator.Figures
             double thirdSide = sides[2];
 
             if (firstSide <= 0 || secondSide <= 0 || thirdSide <= 0)
-                throw new ArgumentException("Стороны треугольника должны быть >= 0");
+                throw new ArgumentException("Стороны треугольника должны быть > 0");
 
             if (firstSide + secondSide <= thirdSide || firstSide + thirdSide <= secondSide ||
                             secondSide + thirdSide <= firstSide)

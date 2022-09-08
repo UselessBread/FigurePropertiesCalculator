@@ -1,7 +1,7 @@
 ﻿namespace FigurePropertiesCalculator.Enums
 {
     /// <summary>
-    /// Перечисление фигур, для которых реализованы калькуляторы
+    /// Перечисление реализованных калькуляторов
     /// </summary>
     public enum CalculationType
     {

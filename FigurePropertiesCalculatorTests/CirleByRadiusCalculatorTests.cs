@@ -2,28 +2,28 @@
 using NUnit.Framework;
 using System;
 
-namespace AreaCalculatorTests
+namespace FigurePropertiesCalculator
 {
-    public class CirleCalculatorTests
+    public class CirleByRadiusCalculatorTests
     {
         #region ctor tests
 
         [Test]
-        public void CircleCalculator_ParameterIsZero_ThrowsException()
+        public void CircleByRadiusCalculator_ParameterIsZero_ThrowsException()
         {
             double[] param = new double[] { 0 };
             Assert.Throws<ArgumentException>(() => new CircleByRadiusCalculator(param));
         }
 
         [Test]
-        public void CircleCalculator_ParameterLessThanZero_ThrowsException()
+        public void CircleByRadiusCalculator_ParameterLessThanZero_ThrowsException()
         {
             double[] param = new double[] { -1 };
             Assert.Throws<ArgumentException>(() => new CircleByRadiusCalculator(param));
         }
 
         [Test]
-        public void CircleCalculator_ParameterOk()
+        public void CircleByRadiusCalculator_ParameterOk()
         {
             double[] param = new double[] { 1 };
             Assert.DoesNotThrow(() => new CircleByRadiusCalculator(param));

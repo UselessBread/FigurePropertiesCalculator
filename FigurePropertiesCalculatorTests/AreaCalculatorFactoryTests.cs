@@ -5,7 +5,7 @@ using FigurePropertiesCalculator.Figures.Interfaces;
 using NUnit.Framework;
 using System;
 
-namespace AreaCalculatorTests
+namespace FigurePropertiesCalculator
 {
     public class AreaCalculatorFactoryTests
     {

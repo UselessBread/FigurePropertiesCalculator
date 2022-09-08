@@ -2,84 +2,84 @@ using FigurePropertiesCalculator.Figures;
 using NUnit.Framework;
 using System;
 
-namespace AreaCalculatorTests
+namespace FigurePropertiesCalculator
 {
-    public class TriangleCalculatorTests
+    public class TriangleByThreeSidesCalculatorTests
     {
         #region ctor tests
 
         [Test]
-        public void TriangleCalculator_FirstParameterLessThanZero_ThrowsException()
+        public void TriangleByThreeSidesCalculator_FirstParameterLessThanZero_ThrowsException()
         {
             double[] param = new double[] { -7, 10, 5 };
             Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
         }
 
         [Test]
-        public void TriangleCalculator_SecondParameterLessThanZero_ThrowsException()
+        public void TriangleByThreeSidesCalculator_SecondParameterLessThanZero_ThrowsException()
         {
             double[] param = new double[] { 7, -10, 5 };
             Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
         }
 
         [Test]
-        public void TriangleCalculator_ThirdParameterLessThanZero_ThrowsException()
+        public void TriangleByThreeSidesCalculator_ThirdParameterLessThanZero_ThrowsException()
         {
             double[] param = new double[] { 7, 10, -5 };
             Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
         }
 
         [Test]
-        public void TriangleCalculator_AllParameterLessThanZero_ThrowsException()
+        public void TriangleByThreeSidesCalculator_AllParameterLessThanZero_ThrowsException()
         {
             double[] param = new double[] { -7, -10, -5 };
             Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
         }
 
         [Test]
-        public void TriangleCalculator_NotValidTriangleCalculator_FirstArgument_ThrowsException()
+        public void TriangleByThreeSidesCalculator_NotValidTriangleByThreeSidesCalculator_FirstArgument_ThrowsException()
         {
             double[] param = new double[] { 1, 10, 5 };
             Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
         }
 
         [Test]
-        public void TriangleCalculator_NotValidTriangleCalculator_SecondArgument_ThrowsException()
+        public void TriangleByThreeSidesCalculator_NotValidTriangleByThreeSidesCalculator_SecondArgument_ThrowsException()
         {
             double[] param = new double[] { 7, 1, 5 };
             Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
         }
 
         [Test]
-        public void TriangleCalculator_NotValidTriangleCalculator_ThirdArgument_ThrowsException()
+        public void TriangleByThreeSidesCalculator_NotValidTriangleByThreeSidesCalculator_ThirdArgument_ThrowsException()
         {
             double[] param = new double[] { 7, 10, 1 };
             Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
         }
 
         [Test]
-        public void TriangleCalculator_NotValidTriangleCalculator_FirstAndSecondArgument_ThrowsException()
+        public void TriangleByThreeSidesCalculator_NotValidTriangleByThreeSidesCalculator_FirstAndSecondArgument_ThrowsException()
         {
             double[] param = new double[] { 1, 1, 5 };
             Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
         }
 
         [Test]
-        public void TriangleCalculator_NotValidTriangleCalculator_SecondAndThirdArgument_ThrowsException()
+        public void TriangleByThreeSidesCalculator_NotValidTriangleByThreeSidesCalculator_SecondAndThirdArgument_ThrowsException()
         {
             double[] param = new double[] { 7, 1, 1 };
             Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
         }
 
         [Test]
-        public void TriangleCalculator_NotValidTriangleCalculator_FirstAndThirdArgument_ThrowsException()
+        public void TriangleByThreeSidesCalculator_NotValidTriangleByThreeSidesCalculator_FirstAndThirdArgument_ThrowsException()
         {
             double[] param = new double[] { 1, 10, 1 };
             Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
         }
 
         [Test]
-        public void TriangleCalculator_ValidTriangleAndParametersOk_DoesNotThrowException()
+        public void TriangleByThreeSidesCalculator_ValidTriangleAndParametersOk_DoesNotThrowException()
         {
             double[] param = new double[] { 7, 10, 5 };
             Assert.DoesNotThrow(() => new TriangleByThreeSidesCalculator(param));

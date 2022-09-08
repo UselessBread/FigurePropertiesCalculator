@@ -79,6 +79,27 @@ namespace FigurePropertiesCalculator
         }
 
         [Test]
+        public void TriangleByThreeSidesCalculator_NotValidTriangleByThreeSidesCalculator_MoreParametersThanRequired_ThrowsException()
+        {
+            double[] param = new double[] { 3, 4, 5, 6 };
+            Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
+        }
+
+        [Test]
+        public void TriangleByThreeSidesCalculator_NotValidTriangleByThreeSidesCalculator_ZeroParametersSpecified_ThrowsException()
+        {
+            double[] param = new double[] { };
+            Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
+        }
+
+        [Test]
+        public void TriangleByThreeSidesCalculator_NotValidTriangleByThreeSidesCalculator_LessParametersThanRequired_ThrowsException()
+        {
+            double[] param = new double[] { 3, 4, 5, 6 };
+            Assert.Throws<ArgumentException>(() => new TriangleByThreeSidesCalculator(param));
+        }
+
+        [Test]
         public void TriangleByThreeSidesCalculator_ValidTriangleAndParametersOk_DoesNotThrowException()
         {
             double[] param = new double[] { 7, 10, 5 };

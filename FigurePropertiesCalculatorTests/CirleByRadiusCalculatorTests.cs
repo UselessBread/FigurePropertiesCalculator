@@ -23,6 +23,20 @@ namespace FigurePropertiesCalculator
         }
 
         [Test]
+        public void CircleByRadiusCalculator_MoreParametersThanRequired_ThrowsException()
+        {
+            double[] param = new double[] { 1,2 };
+            Assert.Throws<ArgumentException>(() => new CircleByRadiusCalculator(param));
+        }
+
+        [Test]
+        public void CircleByRadiusCalculator_ZeroParametersSpecified_ThrowsException()
+        {
+            double[] param = new double[] { };
+            Assert.Throws<ArgumentException>(() => new CircleByRadiusCalculator(param));
+        }
+
+        [Test]
         public void CircleByRadiusCalculator_ParameterOk()
         {
             double[] param = new double[] { 1 };
